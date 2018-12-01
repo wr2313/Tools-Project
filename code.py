@@ -8,8 +8,13 @@ mc=pd.read_csv('data/tmdb_5000_credits.csv')
 #change json columns into python string
 movie['genres']=movie['genres'].apply(json.loads)
 movie['keywords']=movie['keywords'].apply(json.loads)
+movie['production_companies']=movie['production_companies'].apply(json.loads)
+movie['production_countries']=movie['production_countries'].apply(json.loads)
+movie=movie.drop(['original_title','spoken_languages','status','revenue','vote_average','vote_count','budget'],axis=1)
 mc['cast']=mc['cast'].apply(json.loads)
 mc['crew']=mc['crew'].apply(json.loads)
+mc=mc.drop(['title'], axis=1)
+
 
 #extract director from the 'crew' column
 def director(x):
