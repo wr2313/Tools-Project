@@ -201,5 +201,5 @@ def movie_recommendation():
         else:
             return create_recommendations(get_recommendations(movieinput,cosine_sim2))
     else:
-        
+        return getinfo(movieinput)
 
