@@ -185,4 +185,7 @@ cosine_sim2 = cosine_similarity(count_matrix, count_matrix)
 def movie_recommendation():
     print('Thank you for using our movie recommender!')
     movieinput=input("Please enter a movie name ")
+    if movieinput not in moviebase:
+        similar=doyoumean(movieinput)
+        response1=input('Do you mean ' + "\033[1m" + '%s' %similar + "\033[0;0m" +'?\nPlease input Y or N ' )
 
