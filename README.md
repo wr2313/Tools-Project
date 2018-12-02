@@ -44,13 +44,21 @@ Just enter a movie name and we'll be able to output an overview of the movie or 
 	check similarity using cosine similarity
 
 ## Installation instructions:
-#Here is all of package we have implements
+Here are all of packages we have implements
 ```
 import pandas as pd
 import numpy as np
 import json
-
 ```
-
-
+Use sklearn to support our similarity model
+```
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import linear_kernel
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+```
+Use fuzzywuzzy to predict what user mean
+```
+from fuzzywuzzy import process
+```
 ## Run instructions:
