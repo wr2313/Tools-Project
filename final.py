@@ -181,3 +181,8 @@ cosine_sim2 = cosine_similarity(count_matrix, count_matrix)
 
 #function used to return basic info of the movie to the user
 
+#Movie Recommender
+def movie_recommendation():
+    print('Thank you for using our movie recommender!')
+    movieinput=input("Please enter a movie name ")
+
