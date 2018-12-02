@@ -2,8 +2,8 @@
 import pandas as pd
 import numpy as np
 import json
-movie=pd.read_csv('data/tmdb_5000_movies.csv')
-mc=pd.read_csv('data/tmdb_5000_credits.csv')
+movie=pd.read_csv('tmdb_5000_movies.csv')
+mc=pd.read_csv('tmdb_5000_credits.csv')
 
 #change json columns into python string and drop unesccary columns
 movie['genres']=movie['genres'].apply(json.loads)
