@@ -195,5 +195,8 @@ def movie_recommendation():
             movieinput=similar
     feature=input('Do you want to get recommendations or detailed info about the movie?\nPlease input 1 for recommendation and 2 for detailed info ')
     if feature=='1':
+        criteria=input("Do you want to get recommendation based on content or its features(cast, genre, etc)?\n Please input 1 for content, 2 for features ")
+        if criteria == '1':
+            return create_recommendations(get_recommendations(movieinput))
         
 
