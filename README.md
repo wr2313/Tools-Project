@@ -31,7 +31,7 @@ Just enter a movie name and we'll be able to output an overview of the movie or 
 	Preview:
 
 <div align="center">
-  <img src="https://i.imgur.com/Zc8xzIU.png"><br>
+  <img src="https://i.imgur.com/Zc8xzIU.png" height="189" width="1021"><br>
 </div>
 
 2. Content based recommendation system
