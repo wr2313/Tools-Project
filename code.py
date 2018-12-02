@@ -1,11 +1,12 @@
-#two data file
+#read two data files (basic info about each movie: cast, genre, director, etc)
 import pandas as pd
 import numpy as np
 import json
 movie=pd.read_csv('data/tmdb_5000_movies.csv')
 mc=pd.read_csv('data/tmdb_5000_credits.csv')
 
-#change json columns into python string
+
+#change json columns into python string and drop unesccary columns
 movie['genres']=movie['genres'].apply(json.loads)
 movie['keywords']=movie['keywords'].apply(json.loads)
 movie['production_companies']=movie['production_companies'].apply(json.loads)
@@ -16,6 +17,7 @@ mc['crew']=mc['crew'].apply(json.loads)
 mc=mc.drop(['title'], axis=1)
 
 
+#exract the data we need from the strings
 #extract director from the 'crew' column
 def director(x):
     for i in x:
@@ -31,7 +33,6 @@ def getcast(x):
     return castlist
 mc['cast']=mc['cast'].apply(lambda x:getcast(x))
 
-#clean movie data frame
 def getgenre(x):
     genrelist=[]
     for i in range(len(x)):
@@ -59,3 +60,10 @@ def getkeywords(x):
         keywordslist.append(x[i]['name'])
     return keywordslist
 movie['keywords']=movie['keywords'].apply(lambda x:getkeywords(x))
+
+
+#merge two datasets
+movie.rename(columns={'id':'movie_id'},inplace=True)
+dataset=pd.merge(movie,mc,on='movie_id')
+dataset = dataset[['title', 'movie_id', 'director', 'cast', 'genres','overview','keywords','tagline','homepage','original_language','production_companies','production_countries','release_date','runtime','popularity']]
+dataset = dataset[pd.notnull(dataset['overview'])]
