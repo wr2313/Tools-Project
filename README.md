@@ -7,7 +7,7 @@
 
 ## Movie Recommender
 Section 2: def group_name()
-Taimoor Chatoor, Wenchang Rong, Yaqi Zhang, Yue Zheng
+Team Member: Taimoor Chatoor, Wenchang Rong, Yaqi Zhang, Yue Zheng
 
 ## Description:
 Let us show a quick demo of what our Movie Recommender can do!
