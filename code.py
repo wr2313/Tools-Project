@@ -1,4 +1,4 @@
-#two data file 
+#two data file
 import pandas as pd
 import numpy as np
 import json
@@ -39,3 +39,18 @@ def checkdirector(y):
     return indicator
 mc['checkdirector'] = mc['director'].apply(lambda y:(checkdirector(y)))
 
+def getcast(data):
+    actorlist=[]
+    for i in range(len(data)):
+        actorlist.append(data[i]['name'])
+    return actorlist
+mc['cast']=mc['cast'].apply(lambda x:getcast(x))
+mc.rename(columns={'cast':'actor'},inplace=True)
+
+#clean movie data frame
+def extractGenre(data):
+    genrelist=[]
+    for i in range(len(data)):
+        genrelist.append(data[i]['name'])
+    return genrelist
+movie['genres']=movie['genres'].apply(lambda x:extractGenre(x))
