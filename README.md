@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://drive.google.com/open?id=1kLjO5PKIohUrsQ3nsKp7axRs5Dac0nG4"><br>
+  <img src="https://drive.google.com/open?id=1kLjO5PKIohUrsQ3nsKp7axRs5Dac0nG4/view"><br>
 </div>
 
 -----------------
@@ -10,13 +10,13 @@ Section 2: def group_name()
 Taimoor Chatoor, Wenchang Rong, Yaqi Zhang, Yue Zheng
 Description:
 	
-##Dataset:
+## Dataset:
 Our TMDB 5000 Movie Dataset comes from kaggle (https://www.kaggle.com/tmdb/tmdb-movie-metadata). The two csv files contain columns like movieid, overviews, directors and etc.
 
-##What is it?:
+## What is it?:
 Just enter a movie name and we'll be able to generate a list of movies based on it. There are in total three ways that we recommend movies to you.
 
-##Main Features:
+## Main Features:
 Simple recommendation based on popularity
 Content based
 Overview
