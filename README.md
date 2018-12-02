@@ -23,7 +23,11 @@ Our TMDB 5000 Movie Dataset comes from kaggle (https://www.kaggle.com/tmdb/tmdb-
 The two csv files contain columns like movieid, overviews, directors and etc.
 
 ## What is it?:
-Just enter a movie name and we'll be able to output an overview of the movie or generate a list of recommending movies based on it. There are in total two ways that we recommend movies to you. We can either give you recommendation based on the content of the movie, or based on its features(cast, genre, etc.)
+Just enter a movie name and we'll be able to output an overview of the movie or generate a list of recommending movies based on it. 
+
+There are in total two ways that we recommend movies to you. 
+
+We can either give you recommendation based on the content of the movie, or based on its features(cast, genre, etc.)
 
 ## Main Features:
 1. Provide basic info about the input movie
@@ -31,7 +35,7 @@ Just enter a movie name and we'll be able to output an overview of the movie or 
 	Preview:
 
 <div align="center">
-  <img src="https://i.imgur.com/Zc8xzIU.png"><br>
+  <img src="https://i.imgur.com/Zc8xzIU.png" width="700"><br>
 </div>
 
 2. Content based recommendation system
@@ -45,7 +49,7 @@ Just enter a movie name and we'll be able to output an overview of the movie or 
 
 ## Installation instructions:
 
-Here are all of packages we have implements
+Here are all of packages we have implemented:
 ```
 import pandas as pd
 import numpy as np
@@ -58,7 +62,7 @@ from sklearn.metrics.pairwise import linear_kernel
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 ```
-Use fuzzywuzzy to predict what user mean
+Use fuzzywuzzy to predict what user means (if the input is misspelled or in the wrong format)
 first install packages
 ```
 ! pip install fuzzywuzzy
