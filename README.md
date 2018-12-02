@@ -81,9 +81,10 @@ from fuzzywuzzy import process
 ## Run instructions
 Please run our code first
 
+```
 Message popup:	Thank you for using our movie recommender!
 
-
+```
 
 Enter movie name you want to know
 
