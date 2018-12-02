@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://pbs.twimg.com/media/DtYt8ywWwAA4xk0.jpg"><br>
+  <img src="https://pbs.twimg.com/media/DtYt8ywWwAA4xk0.jpg" width="800"><br>
 </div>
 
 -----------------
@@ -13,7 +13,7 @@ Team Member: Taimoor Chatoor, Wenchang Rong, Yaqi Zhang, Yue Zheng
 ## Description:
 Let us show a quick demo of what our Movie Recommender can do!
 <div align="center">
-  <img src="https://media.giphy.com/media/24FIiakadcnXfy3GR6/giphy.gif"><br>
+  <img src="https://media.giphy.com/media/24FIiakadcnXfy3GR6/giphy.gif" width="800"><br>
 </div>
 
 
