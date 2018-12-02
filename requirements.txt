@@ -1,4 +1,22 @@
 Packages needed to be installed before using our recommendation system:
-1.
-2.
-3.
+Here are all of packages we have implemented:
+```
+import pandas as pd
+import numpy as np
+import json
+```
+Use sklearn to support our similarity model
+```
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import linear_kernel
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+```
+Use fuzzywuzzy to predict what user means (if the input is misspelled or in the wrong format)
+
+first install packages
+```
+! pip install fuzzywuzzy
+```
+```
+from fuzzywuzzy import process
