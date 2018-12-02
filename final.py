@@ -180,6 +180,17 @@ from sklearn.metrics.pairwise import cosine_similarity
 cosine_sim2 = cosine_similarity(count_matrix, count_matrix)
 
 #function used to return basic info of the movie to the user
+def getinfo(x):
+    for i in range(len(dataset)):
+        if dataset.iloc[i]['title']==x:
+            print('\nDetailed Info: \n')
+            print('Title: ' +x +"\nGenres: "
+                  +str(dataset.iloc[i]['genres']).strip('[]').replace(' ','')
+                  +"\nHomepage: "
+                  +str(dataset.iloc[i]['homepage']).strip('[]').replace(' ','')
+                  +'\nOverview:\n' +str(dataset.iloc[i]['overview']))
+
+#function used to return basic info of the movie to the user
 moviebase=[]
 for i in dataset['title']:
     moviebase.append(i)
