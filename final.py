@@ -127,12 +127,6 @@ dataset['keywords']=dataset['keywords'].apply(change_list_len)
 #Create another simple dateset
 simple=dataset[['title', 'movie_id', 'director', 'cast']]
 #gathering info based on simple
-actorlist=[]
-for i in range(len(simple)):
-    for item in simple['cast'].iloc[i]:
-        if item not in actorlist:
-            actorlist.append(item)
-
 directorlist=[]
 for i in range(len(simple)):
     if simple['director'].iloc[i] not in directorlist:
@@ -236,12 +230,11 @@ def movie_recommendation():
         return getinfo(movieinput)
 
 #further function exploration
-#we have simple,actorlist, directorlist
-def topmovie(name,simple,string):
-    #string represent director or actor
+#we have simple,directorlist
+def topmovie(name,simple):
     works={}
     for i in range(len(simple)):
-        if simple[string].iloc[i]==name:
+        if simple['director'].iloc[i]==name:
             works.update({simple['title'].iloc[i]:simple['popularity'].iloc[i]})
 
     top=sorted(works.items(), key=lambda t: t[1],reverse=True)
@@ -250,17 +243,24 @@ def topmovie(name,simple,string):
 
 def wantDirecor(name,directorlist):
     if name in directorlist:
-        print("Yeah,we know him/her well!")
-        pop=topmovie(name,simple,'director')
-        print(pop)
+        print("Yeah,we know him/her well! Here is the list of his/her works." )
+        pop=topmovie(name,simple)
+        return pop
     else:
         print("Sorry,we cannot find him/her")
-def wantActor(name,actorlist):
-    if name in actorlist:
-        print("Yeah,we know him/her well!")
-        pop=topmovie(name,simple,'actor')
-        print(pop)
-    else:
-        print("Sorry,we cannot find him/her")
+
+def start():
+    main=movie_recommendation()
+    
+    contin=input("Do you want explore more?\nPlease input Y or N ")
+    if contin.upper() == 'N':
+        print("Thank you for using our fantastic movie recommend system,See you next time!")
+
+    elif contin.upper() == 'Y':
+        print("Further Exploration our system! ")
+        name=input("Please enter your favorite director.")
+        result=wantDirecor(name,directorlist)
+        return result     
+        
 
 
