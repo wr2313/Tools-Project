@@ -180,6 +180,12 @@ from sklearn.metrics.pairwise import cosine_similarity
 cosine_sim2 = cosine_similarity(count_matrix, count_matrix)
 
 #function used to return basic info of the movie to the user
+moviebase=[]
+for i in dataset['title']:
+    moviebase.append(i)
+from fuzzywuzzy import process
+def doyoumean(x):
+    return process.extractOne(x, moviebase)[0]
 
 #Movie Recommender
 def movie_recommendation():
