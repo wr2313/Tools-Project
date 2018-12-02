@@ -16,9 +16,9 @@ Let us show a quick demo of what our Movie Recommender can do!
   <img src="https://media.giphy.com/media/24FIiakadcnXfy3GR6/giphy.gif"><br>
 </div>
 
-	
+
 ## Dataset:
-Our TMDB 5000 Movie Dataset comes from kaggle (https://www.kaggle.com/tmdb/tmdb-movie-metadata). 
+Our TMDB 5000 Movie Dataset comes from kaggle (https://www.kaggle.com/tmdb/tmdb-movie-metadata).
 
 The two csv files contain columns like movieid, overviews, directors and etc.
 
@@ -29,7 +29,7 @@ Just enter a movie name and we'll be able to output an overview of the movie or 
 1. Provide basic info about the input movie
 
 	Preview:
-	
+
 <div align="center">
   <img src="https://i.ibb.co/bBZmT5B/overview.jpg"><br>
 </div>
@@ -37,15 +37,20 @@ Just enter a movie name and we'll be able to output an overview of the movie or 
 2. Content based recommendation system
 
 	Attribute: Overview
-	
+
 3. Feature based recommendation system
 
 	Attribute: Director, cast, keywords, genres
 	check similarity using cosine similarity
 
 ## Installation instructions:
+#Here is all of package we have implements
+```
+import pandas as pd
+import numpy as np
+import json
+
+```
 
 
 ## Run instructions:
-
-
