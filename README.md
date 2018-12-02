@@ -55,6 +55,11 @@ import pandas as pd
 import numpy as np
 import json
 ```
+Install scikit-learn usinhg pip 
+```
+pip install sklearn --upgrade
+```
+
 Use sklearn to support our similarity model
 ```
 from sklearn.feature_extraction.text import TfidfVectorizer
