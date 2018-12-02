@@ -198,5 +198,8 @@ def movie_recommendation():
         criteria=input("Do you want to get recommendation based on content or its features(cast, genre, etc)?\n Please input 1 for content, 2 for features ")
         if criteria == '1':
             return create_recommendations(get_recommendations(movieinput))
+        else:
+            return create_recommendations(get_recommendations(movieinput,cosine_sim2))
+    else:
         
 
