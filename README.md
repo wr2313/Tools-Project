@@ -12,9 +12,7 @@ Team Member: Taimoor Chatoor, Wenchang Rong, Yaqi Zhang, Yue Zheng
 
 ## Description:
 Let us show a quick demo of what our Movie Recommender can do!
-<iframe width="420" height="315"
-src="https://youtu.be/xVW1FXe6zi4">
-</iframe>
+<iframe width="420" height="315" src="https://youtu.be/xVW1FXe6zi4" align="center"></iframe>
 	
 ## Dataset:
 Our TMDB 5000 Movie Dataset comes from kaggle (https://www.kaggle.com/tmdb/tmdb-movie-metadata). The two csv files contain columns like movieid, overviews, directors and etc.
