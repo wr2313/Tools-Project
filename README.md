@@ -13,7 +13,7 @@ Team Member: Taimoor Chatoor, Wenchang Rong, Yaqi Zhang, Yue Zheng
 ## Description:
 Let us show a quick demo of what our Movie Recommender can do!
 <div align="center">
-  <img src="https://media.giphy.com/media/24FIiakadcnXfy3GR6/giphy.gif" width="800"><br>
+  <img src="https://media.giphy.com/media/24FIiakadcnXfy3GR6/giphy.gif" width="700"><br>
 </div>
 
 
