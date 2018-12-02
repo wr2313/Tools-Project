@@ -54,3 +54,10 @@ def extractGenre(data):
         genrelist.append(data[i]['name'])
     return genrelist
 movie['genres']=movie['genres'].apply(lambda x:extractGenre(x))
+
+#give a binary column for genre
+def getgenre(x):
+    for i in range(len(x):
+        genrelist.append(x[i]['name'])
+    return genrelist
+
