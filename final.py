@@ -124,6 +124,19 @@ dataset['genres']=dataset['genres'].apply(change_list_len)
 
 dataset['keywords']=dataset['keywords'].apply(change_list_len)
 
+#gathering info based on simple
+actorList=[]
+for i in range(len(simple)):
+    for item in simple['cast'].iloc[i]:
+        if item not in actorList:
+            actorList.append(item)
+actorList.sort()
+directorlist=[]
+for i in range(len(simple['director'])):
+        if simple['director'][i] not in directorlist:
+            directorlist.append(simple['director'][i])
+directorlist.sort()
+
 def clean_data_string(x):
     if type(x) == str:
         no_spaxce_string = x.replace(" ","")
