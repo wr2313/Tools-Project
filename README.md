@@ -31,7 +31,7 @@ Just enter a movie name and we'll be able to generate a list of movies based on 
 	Preview:
 	
 <div align="center">
-  <img src="https://imgur.com/a/7TTtjw9"><br>
+  <img src="https://i.ibb.co/bBZmT5B/overview.jpg"><br>
 </div>
 
 2. Content based recommendation system
