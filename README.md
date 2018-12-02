@@ -79,9 +79,11 @@ first install packages
 from fuzzywuzzy import process
 ```
 ## Run instructions
-|-- .Welcome to our movie recommendation system world
-|-- .Please run our code first
-    |-- .Enter movie name you want to know
-        |-- In any format (even if you missed word or misspelled,we handle that! Don't worry)
+Please run our code first
+Message popup:	Thank you for using our movie recommender!
+
+
+Enter movie name you want to know
+In any format (even if you missed word or misspelled,we handle that! Don't worry)
 
     
