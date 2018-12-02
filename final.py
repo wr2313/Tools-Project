@@ -253,14 +253,13 @@ def wantDirecor(name,directorlist):
 movie_recommendation()
     
 contin=input("Do you want explore more?\nPlease input Y or N ")
-if contin.upper() == 'N':
-    print("Thank you for using our fantastic movie recommend system,See you next time!")
 
-elif contin.upper() == 'Y':
+if contin.upper() == 'Y':
     print("Further Exploration our system! ")
     name=input("Please enter your favorite director.")
     result=wantDirecor(name,directorlist)
-    return result     
+    print(result)     
+print("Thank you for using our fantastic movie recommend system,See you next time!")
 
 
 
