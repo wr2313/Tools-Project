@@ -188,4 +188,9 @@ def movie_recommendation():
     if movieinput not in moviebase:
         similar=doyoumean(movieinput)
         response1=input('Do you mean ' + "\033[1m" + '%s' %similar + "\033[0;0m" +'?\nPlease input Y or N ' )
+        if response1.upper() == 'N':
+            print("Sorry we couldn't match your input movie name in our database\nPlease provide a more accurate name and try again " )
+            return
+        else:
+            movieinput=similar
 
