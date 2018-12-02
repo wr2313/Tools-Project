@@ -39,3 +39,8 @@ def checkdirector(y):
     return indicator
 mc['checkdirector'] = mc['director'].apply(lambda y:(checkdirector(y)))
 
+#give a binary column for genre
+def getgenre(x):
+    for i in range(len(x):
+        genrelist.append(x[i]['name'])
+    return genrelist
