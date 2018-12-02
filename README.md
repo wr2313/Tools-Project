@@ -58,7 +58,12 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 ```
 Use fuzzywuzzy to predict what user mean
+first install packages
+```
+! pip install fuzzywuzzy
+```
 ```
 from fuzzywuzzy import process
 ```
 ## Run instructions:
+1.
