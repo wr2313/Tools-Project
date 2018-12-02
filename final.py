@@ -113,7 +113,7 @@ def create_recommendations(l):
     for i in range(len(l)):
         print("Recommended Movie "+str(i+1)+" : " +str(l[i]))
 
-create_recommendations(get_recommendations('Avatar'))
+#create_recommendations(get_recommendations('Avatar'))
 
 def change_list_len(x):
     return x[:5]
@@ -125,7 +125,7 @@ dataset['genres']=dataset['genres'].apply(change_list_len)
 dataset['keywords']=dataset['keywords'].apply(change_list_len)
 
 #Create another simple dateset
-simple=dataset[['title', 'movie_id', 'director', 'cast']]
+simple=dataset[['title', 'movie_id', 'director', 'popularity']]
 #gathering info based on simple
 directorlist=[]
 for i in range(len(simple)):
@@ -249,18 +249,18 @@ def wantDirecor(name,directorlist):
     else:
         print("Sorry,we cannot find him/her")
 
-def start():
-    main=movie_recommendation()
-    
-    contin=input("Do you want explore more?\nPlease input Y or N ")
-    if contin.upper() == 'N':
-        print("Thank you for using our fantastic movie recommend system,See you next time!")
 
-    elif contin.upper() == 'Y':
-        print("Further Exploration our system! ")
-        name=input("Please enter your favorite director.")
-        result=wantDirecor(name,directorlist)
-        return result     
-        
+movie_recommendation()
+    
+contin=input("Do you want explore more?\nPlease input Y or N ")
+if contin.upper() == 'N':
+    print("Thank you for using our fantastic movie recommend system,See you next time!")
+
+elif contin.upper() == 'Y':
+    print("Further Exploration our system! ")
+    name=input("Please enter your favorite director.")
+    result=wantDirecor(name,directorlist)
+    return result     
+
 
 
