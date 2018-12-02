@@ -39,13 +39,21 @@ def checkdirector(y):
     return indicator
 mc['checkdirector'] = mc['director'].apply(lambda y:(checkdirector(y)))
 
-def getcast(data):
+def getactor(data):
     actorlist=[]
     for i in range(len(data)):
         actorlist.append(data[i]['name'])
     return actorlist
-mc['cast']=mc['cast'].apply(lambda x:getcast(x))
+mc['cast']=mc['cast'].apply(lambda x:getactor(x))
 mc.rename(columns={'cast':'actor'},inplace=True)
+
+#Return Actor Binary
+ActorList=[]
+for i in range(len(mc)):
+    for j in range(len(mc['actor'].iloc[i])):
+        if mc['actor'].iloc[i][j] not in ActorList:
+            ActorList.append(mc.iloc[i]['actor'][j])
+#ActorList
 
 #clean movie data frame
 def extractGenre(data):
@@ -55,9 +63,5 @@ def extractGenre(data):
     return genrelist
 movie['genres']=movie['genres'].apply(lambda x:extractGenre(x))
 
-#give a binary column for genre
-def getgenre(x):
-    for i in range(len(x):
-        genrelist.append(x[i]['name'])
-    return genrelist
+
 
