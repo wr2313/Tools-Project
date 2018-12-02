@@ -24,63 +24,38 @@ def director(x):
 mc['crew']=mc['crew'].apply(director)
 mc.rename(columns={'crew':'director'},inplace=True)
 
-#give a binary column for director
-directorlist=[]
-for i in range(len(mc['director'])):
-        if mc['director'][i] not in directorlist:
-            directorlist.append(mc['director'][i])
-def checkdirector(y):
-    indicator = []
-    for director in directorlist:
-        if director == y:
-            indicator.append(1)
-        else:
-            indicator.append(0)
-    return indicator
-mc['checkdirector'] = mc['director'].apply(lambda y:(checkdirector(y)))
-
-def getactor(data):
-    actorlist=[]
-    for i in range(len(data)):
-        actorlist.append(data[i]['name'])
-    return actorlist
-mc['cast']=mc['cast'].apply(lambda x:getactor(x))
-mc.rename(columns={'cast':'actor'},inplace=True)
-
-#Return #ActorList
-ActorList=[]
-for i in range(len(mc)):
-    for j in range(len(mc['actor'].iloc[i])):
-        if mc['actor'].iloc[i][j] not in ActorList:
-            ActorList.append(mc.iloc[i]['actor'][j])
-
+def getcast(x):
+    castlist=[]
+    for i in range(len(x)):
+        castlist.append(x[i]['name'])
+    return castlist
+mc['cast']=mc['cast'].apply(lambda x:getcast(x))
 
 #clean movie data frame
-def extractGenre(data):
+def getgenre(x):
     genrelist=[]
-    for i in range(len(data)):
-        genrelist.append(data[i]['name'])
+    for i in range(len(x)):
+        genrelist.append(x[i]['name'])
     return genrelist
+movie['genres']=movie['genres'].apply(lambda x:getgenre(x))
 
 def getcountry(x):
     country=[]
     for i in range(len(x)):
         country.append(x[i]['name'])
     return country
+movie['production_countries']=movie['production_countries'].apply(lambda x:getcountry(x))
 
 def getcompany(x):
     company=[]
     for i in range(len(x)):
         company.append(x[i]['name'])
     return company
-
+movie['production_companies']=movie['production_companies'].apply(lambda x:getcompany(x))
 
 def getkeywords(x):
     keywordslist=[]
     for i in range(len(x)):
         keywordslist.append(x[i]['name'])
     return keywordslist
-
-movie['genres']=movie['genres'].apply(lambda x:extractGenre(x))
-movie['production_countries']=movie['production_countries'].apply(lambda x:getcountry(x))
-movie['production_companies']=movie['production_companies'].apply(lambda x:getcompany(x))
+movie['keywords']=movie['keywords'].apply(lambda x:getkeywords(x))
