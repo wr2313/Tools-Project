@@ -1,7 +1,6 @@
 <div align="center">
   <img src="https://pbs.twimg.com/media/DtYt8ywWwAA4xk0.jpg"><br>
 </div>
-<iframe width="420" height="315" src="https://youtu.be/xVW1FXe6zi4" frameborder=“0” allowfullscreen></iframe>
 
 -----------------
 # Tools-Project
@@ -30,7 +29,7 @@ Just enter a movie name and we'll be able to generate a list of movies based on 
 	Preview:
 	
 <div align="center">
-  <img src="https://ibb.co/MfjZttF"><br>
+  <img src="https://imgur.com/a/7TTtjw9"><br>
 </div>
 
 2. Content based recommendation system
