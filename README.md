@@ -79,13 +79,13 @@ first install packages
 from fuzzywuzzy import process
 ```
 ## Run instructions
-*Please run our code first
+* Please run our code first
 
 ```
 Message popup:	Thank you for using our movie recommender!
 ```
 
-*Enter movie name you want to know
+* Enter movie name you want to know
 
 In any format (even if you missed word or misspelled,we handle that! Don't worry)
 
@@ -94,7 +94,7 @@ In any format (even if you missed word or misspelled,we handle that! Don't worry
 Message Popup: "Do you mean (something)?"
 ```
 
-*We will return the most similar movie name in our movie base
+* We will return the most similar movie name in our movie base
 
 ```
 Message Popup: "Do you want to get recommendations or detailed info about the movie?"
@@ -103,7 +103,7 @@ Message Popup: "Do you want to get recommendations or detailed info about the mo
 You can choose a feaure between this two. Enter 1 will generate recommendations, 2 will return basic information about the movie!
 
 
-*If you want movie recommendation, there is a new 
+* If you want movie recommendation, there is a new 
 
 ```
 Message Popup: "Do you want to get recommendation based on content or its features(cast, genre, etc)?" 
