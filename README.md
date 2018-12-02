@@ -25,9 +25,9 @@ Our TMDB 5000 Movie Dataset comes from kaggle (https://www.kaggle.com/tmdb/tmdb-
 The two csv files contain columns like movieid, overviews, directors and etc.
 
 ## What is it?:
-Just enter a movie name and we'll be able to output an overview of the movie or generate a list of recommending movies based on it. 
+Just enter a movie name and we'll be able to output an overview of the movie or generate a list of recommending movies based on it.
 
-There are in total two ways that we recommend movies to you. 
+There are in total two ways that we recommend movies to you.
 
 We can either give you recommendation based on the content of the movie, or based on its features(cast, genre, etc.)
 
@@ -57,7 +57,7 @@ import pandas as pd
 import numpy as np
 import json
 ```
-Install scikit-learn usinhg pip 
+Install scikit-learn usinhg pip
 ```
 pip install sklearn --upgrade
 ```
@@ -103,18 +103,24 @@ Message Popup: "Do you want to get recommendations or detailed info about the mo
 You can choose a feaure between this two. Enter 1 will generate recommendations, 2 will return basic information about the movie!
 
 
-* If you want movie recommendation, there is a new 
+* If you want movie recommendation, there is a new
 
 ```
-Message Popup: "Do you want to get recommendation based on content or its features(cast, genre, etc)?" 
+Message Popup: "Do you want to get recommendation based on content or its features(cast, genre, etc)?"
 ```
 
 Please select your preferred approach, 1 for content, 2 for features.
 
+* If you want know more director productions, Please enter Y and then enter an director name who interests you.
+```
+Message Popup: "Do you want explore more?\n Please input Y or N"
+```
+```
+Message Popup: "Further Exploration our system! \n
+Please enter director who interests you."
 
-
-
-
-
-
-    
+```
+* Hope you enjoy with our system.
+```
+Message Popup: "Thank you for using our fantastic movie recommend system, See you next time!"
+```
