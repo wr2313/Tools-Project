@@ -31,7 +31,7 @@ Just enter a movie name and we'll be able to output an overview of the movie or 
 	Preview:
 
 <div align="center">
-  <img src="https://i.imgur.com/Zc8xzIU.png"><br>
+  <img src="https://i.imgur.com/Zc8xzIU.png" height="189" width="1021"><br>
 </div>
 
 2. Content based recommendation system
@@ -59,7 +59,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 ```
 Use fuzzywuzzy to predict what user means (if the input is misspelled or in the wrong format)
-
 first install packages
 ```
 ! pip install fuzzywuzzy
