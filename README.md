@@ -6,8 +6,12 @@ Taimoor Chatoor, Wenchang Rong, Yaqi Zhang, Yue Zheng
 Description:
 	
 Dataset:
+Our TMDB 5000 Movie Dataset comes from kaggle (https://www.kaggle.com/tmdb/tmdb-movie-metadata). The two csv files contain columns like movieid, overviews, directors and etc.
 
-Feature:
+What is it?:
+Just enter a movie name and we'll be able to generate a list of movies based on it. There are in total three ways that we recommend movies to you.
+
+Main Features:
 Simple recommendation based on popularity
 Content based
 Overview
