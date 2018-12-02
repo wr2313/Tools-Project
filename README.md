@@ -8,7 +8,12 @@
 ## Movie Recommender
 Section 2: def group_name()
 Taimoor Chatoor, Wenchang Rong, Yaqi Zhang, Yue Zheng
-Description:
+
+## Description:
+Let us show a quick demo of what our Movie Recommender can do!
+<div align="center">
+  <p>insert your video link here</p>
+</div>
 	
 ## Dataset:
 Our TMDB 5000 Movie Dataset comes from kaggle (https://www.kaggle.com/tmdb/tmdb-movie-metadata). The two csv files contain columns like movieid, overviews, directors and etc.
