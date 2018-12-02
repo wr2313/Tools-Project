@@ -6,8 +6,9 @@
 # Tools-Project
 
 ## Movie Recommender
-<ul>Section 2: def group_name()</ul>
-<ul>Team Member: Taimoor Chatoor, Wenchang Rong, Yaqi Zhang, Yue Zheng</ul>
+Section 2: def group_name()
+
+Team Member: Taimoor Chatoor, Wenchang Rong, Yaqi Zhang, Yue Zheng
 
 ## Description:
 Let us show a quick demo of what our Movie Recommender can do!
@@ -23,8 +24,12 @@ Just enter a movie name and we'll be able to generate a list of movies based on 
 
 ## Main Features:
 Simple recommendation based on popularity
+
 Content based
+
 Overview
+
 Feature based
+
 Director, cast, keywords, genres
 
