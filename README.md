@@ -31,7 +31,7 @@ Just enter a movie name and we'll be able to output an overview of the movie or 
 	Preview:
 
 <div align="center">
-  <img src="https://i.ibb.co/bBZmT5B/overview.jpg"><br>
+  <img src="https://i.imgur.com/Zc8xzIU.png"><br>
 </div>
 
 2. Content based recommendation system
@@ -44,6 +44,7 @@ Just enter a movie name and we'll be able to output an overview of the movie or 
 	check similarity using cosine similarity
 
 ## Installation instructions:
+
 Here are all of packages we have implements
 ```
 import pandas as pd
@@ -58,7 +59,15 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 ```
 Use fuzzywuzzy to predict what user mean
+first install packages
+```
+! pip install fuzzywuzzy
+```
 ```
 from fuzzywuzzy import process
 ```
-## Run instructions:
+## Run instructions
+1.
+
+
+
