@@ -193,4 +193,7 @@ def movie_recommendation():
             return
         else:
             movieinput=similar
+    feature=input('Do you want to get recommendations or detailed info about the movie?\nPlease input 1 for recommendation and 2 for detailed info ')
+    if feature=='1':
+        
 
