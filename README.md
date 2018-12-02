@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="https://drive.google.com/open?id=1kLjO5PKIohUrsQ3nsKp7axRs5Dac0nG4/view"><br>
+  <img src="https://pbs.twimg.com/media/DtYt8ywWwAA4xk0.jpg"><br>
 </div>
 
 -----------------
 # Tools-Project
 
-##Movie Recommender
+## Movie Recommender
 Section 2: def group_name()
 Taimoor Chatoor, Wenchang Rong, Yaqi Zhang, Yue Zheng
 Description:
