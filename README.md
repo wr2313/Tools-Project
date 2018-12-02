@@ -23,7 +23,11 @@ Our TMDB 5000 Movie Dataset comes from kaggle (https://www.kaggle.com/tmdb/tmdb-
 The two csv files contain columns like movieid, overviews, directors and etc.
 
 ## What is it?:
-Just enter a movie name and we'll be able to output an overview of the movie or generate a list of recommending movies based on it. There are in total two ways that we recommend movies to you. We can either give you recommendation based on the content of the movie, or based on its features(cast, genre, etc.)
+Just enter a movie name and we'll be able to output an overview of the movie or generate a list of recommending movies based on it. 
+
+There are in total two ways that we recommend movies to you. 
+
+We can either give you recommendation based on the content of the movie, or based on its features(cast, genre, etc.)
 
 ## Main Features:
 1. Provide basic info about the input movie
