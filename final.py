@@ -1,10 +1,11 @@
+#read two data files (basic info about each movie: cast, genre, director, etc)
 import pandas as pd
 import numpy as np
 import json
 movie=pd.read_csv('data/tmdb_5000_movies.csv')
 mc=pd.read_csv('data/tmdb_5000_credits.csv')
 
-#change json columns into python string
+#change json columns into python string and drop unesccary columns
 movie['genres']=movie['genres'].apply(json.loads)
 movie['keywords']=movie['keywords'].apply(json.loads)
 movie['production_companies']=movie['production_companies'].apply(json.loads)
@@ -14,6 +15,7 @@ mc['cast']=mc['cast'].apply(json.loads)
 mc['crew']=mc['crew'].apply(json.loads)
 mc=mc.drop(['title'], axis=1)
 
+#exract the data we need from the strings
 def director(x):
     for i in x:
         if i['job'] == 'Director':
@@ -56,15 +58,15 @@ def getkeywords(x):
     return keywordslist
 movie['keywords']=movie['keywords'].apply(lambda x:getkeywords(x))
 
+#merge two datasets
 movie.rename(columns={'id':'movie_id'},inplace=True)
 dataset=pd.merge(movie,mc,on='movie_id')
-
 dataset = dataset[['title', 'movie_id', 'director', 'cast', 'genres','overview','keywords','tagline','homepage','original_language','production_companies','production_countries','release_date','runtime','popularity']]
-
-dataset['overview'].isna().sum()
-
 dataset = dataset[pd.notnull(dataset['overview'])]
 
+#build 2 functions using similarity 
+#content based recommendation system: overview
+#featured based recommendation system: cast, genre, keywords, director
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 tfidf = TfidfVectorizer(stop_words='english')
@@ -75,7 +77,6 @@ tfidf_matrix.shape
 from sklearn.metrics.pairwise import linear_kernel
 
 cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
-
 
 dataset[dataset.duplicated(['overview'], keep=False)]
 
@@ -178,5 +179,5 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 cosine_sim2 = cosine_similarity(count_matrix, count_matrix)
 
+#function used to return basic info of the movie to the user
 
-create_recommendations(get_recommendations('Avatar',cosine_sim2))
