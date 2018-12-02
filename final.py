@@ -124,18 +124,20 @@ dataset['genres']=dataset['genres'].apply(change_list_len)
 
 dataset['keywords']=dataset['keywords'].apply(change_list_len)
 
+#Create another simple dateset
+simple=dataset[['title', 'movie_id', 'director', 'cast']]
 #gathering info based on simple
-actorList=[]
+actorlist=[]
 for i in range(len(simple)):
     for item in simple['cast'].iloc[i]:
-        if item not in actorList:
-            actorList.append(item)
-actorList.sort()
+        if item not in actorlist:
+            actorlist.append(item)
+
 directorlist=[]
-for i in range(len(simple['director'])):
-        if simple['director'][i] not in directorlist:
-            directorlist.append(simple['director'][i])
-directorlist.sort()
+for i in range(len(simple)):
+    if simple['director'].iloc[i] not in directorlist:
+            directorlist.append(simple['director'].iloc[i])
+
 
 def clean_data_string(x):
     if type(x) == str:
@@ -232,4 +234,33 @@ def movie_recommendation():
             return create_recommendations(get_recommendations(movieinput,cosine_sim2))
     else:
         return getinfo(movieinput)
+
+#further function exploration
+#we have simple,actorlist, directorlist
+def topmovie(name,simple,string):
+    #string represent director or actor
+    works={}
+    for i in range(len(simple)):
+        if simple[string].iloc[i]==name:
+            works.update({simple['title'].iloc[i]:simple['popularity'].iloc[i]})
+
+    top=sorted(works.items(), key=lambda t: t[1],reverse=True)
+    df = pd.DataFrame(top,columns=['movie','popularity'])
+    return df       
+
+def wantDirecor(name,directorlist):
+    if name in directorlist:
+        print("Yeah,we know him/her well!")
+        pop=topmovie(name,simple,'director')
+        print(pop)
+    else:
+        print("Sorry,we cannot find him/her")
+def wantActor(name,actorlist):
+    if name in actorlist:
+        print("Yeah,we know him/her well!")
+        pop=topmovie(name,simple,'actor')
+        print(pop)
+    else:
+        print("Sorry,we cannot find him/her")
+
 
