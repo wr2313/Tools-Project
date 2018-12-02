@@ -59,6 +59,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 ```
 Use fuzzywuzzy to predict what user means (if the input is misspelled or in the wrong format)
+
 first install packages
 ```
 ! pip install fuzzywuzzy
