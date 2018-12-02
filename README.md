@@ -45,7 +45,7 @@ Just enter a movie name and we'll be able to output an overview of the movie or 
 
 ## Installation instructions:
 
-Here are all of packages we have implements
+Here are all of packages we have implemented:
 ```
 import pandas as pd
 import numpy as np
@@ -58,7 +58,7 @@ from sklearn.metrics.pairwise import linear_kernel
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 ```
-Use fuzzywuzzy to predict what user mean
+Use fuzzywuzzy to predict what user means (if the input is misspelled or in the wrong format)
 first install packages
 ```
 ! pip install fuzzywuzzy
