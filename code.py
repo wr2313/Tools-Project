@@ -47,13 +47,13 @@ def getactor(data):
 mc['cast']=mc['cast'].apply(lambda x:getactor(x))
 mc.rename(columns={'cast':'actor'},inplace=True)
 
-#Return Actor Binary
+#Return #ActorList
 ActorList=[]
 for i in range(len(mc)):
     for j in range(len(mc['actor'].iloc[i])):
         if mc['actor'].iloc[i][j] not in ActorList:
             ActorList.append(mc.iloc[i]['actor'][j])
-#ActorList
+
 
 #clean movie data frame
 def extractGenre(data):
@@ -61,7 +61,26 @@ def extractGenre(data):
     for i in range(len(data)):
         genrelist.append(data[i]['name'])
     return genrelist
+
+def getcountry(x):
+    country=[]
+    for i in range(len(x)):
+        country.append(x[i]['name'])
+    return country
+
+def getcompany(x):
+    company=[]
+    for i in range(len(x)):
+        company.append(x[i]['name'])
+    return company
+
+
+def getkeywords(x):
+    keywordslist=[]
+    for i in range(len(x)):
+        keywordslist.append(x[i]['name'])
+    return keywordslist
+
 movie['genres']=movie['genres'].apply(lambda x:extractGenre(x))
-
-
-
+movie['production_countries']=movie['production_countries'].apply(lambda x:getcountry(x))
+movie['production_companies']=movie['production_companies'].apply(lambda x:getcompany(x))
