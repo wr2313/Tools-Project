@@ -51,6 +51,10 @@ If you would like to know movies directed by your favourite directors, we can al
 	Attribute: Director, cast, keywords, genres
 	check similarity using cosine similarity
 
+3. A full list of the movies directed by your favourite director
+	
+	Attribute: director, movie names, popularity
+
 ## Installation instructions:
 
 Here are all of packages we have implemented:
@@ -81,6 +85,9 @@ first install packages
 from fuzzywuzzy import process
 ```
 ## Run instructions
+
+After cloning, please make sure you are in the right directory!
+
 * Please run our code first
 
 ```
