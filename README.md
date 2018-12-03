@@ -116,8 +116,8 @@ Please select your preferred approach, 1 for content, 2 for features.
 Message Popup: "Do you want explore more?
                   Please input Y or N"
 ```
-  -when you enter name please use format
-   "First_name Last_name" 
+  when you enter name please use format
+   "First_name Last_name"
 ```
 Message Popup: "Further Exploration our system!
           Please enter director who interests you."
