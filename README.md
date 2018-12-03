@@ -31,6 +31,8 @@ There are in total two ways that we recommend movies to you.
 
 We can either give you recommendation based on the content of the movie, or based on its features(cast, genre, etc.)
 
+If you would like to know movies directed by your favourite directors, we can also do that!
+
 ## Main Features:
 1. Provide basic info about the input movie
 
