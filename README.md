@@ -117,7 +117,7 @@ Message Popup: "Do you want explore more?
                   Please input Y or N"
 ```
   when you enter name please use format
-   "First_name Last_name"
+   "First_name Last_name" eg."James Cameron"
 ```
 Message Popup: "Further Exploration our system!
           Please enter director who interests you."
