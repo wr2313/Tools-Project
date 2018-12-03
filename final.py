@@ -247,7 +247,7 @@ def wantDirecor(name,directorlist):
         pop=topmovie(name,simple)
         return pop
     else:
-        print("Sorry,we cannot find him/her")
+        return "Sorry,we cannot find him/her"
 
 
 movie_recommendation()

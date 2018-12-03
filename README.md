@@ -113,11 +113,14 @@ Please select your preferred approach, 1 for content, 2 for features.
 
 * If you want know more director productions, Please enter Y and then enter an director name who interests you.
 ```
-Message Popup: "Do you want explore more?\n Please input Y or N"
+Message Popup: "Do you want explore more?
+                  Please input Y or N"
 ```
+  -when you enter name please use format
+   "First_name Last_name" 
 ```
-Message Popup: "Further Exploration our system! \n
-Please enter director who interests you."
+Message Popup: "Further Exploration our system!
+          Please enter director who interests you."
 
 ```
 * Hope you enjoy with our system.
