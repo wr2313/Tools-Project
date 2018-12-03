@@ -121,7 +121,6 @@ Message Popup: "Do you want explore more?
 ```
 Message Popup: "Further Exploration our system!
           Please enter director who interests you."
-
 ```
 * Hope you enjoy with our system.
 ```
